@@ -14,7 +14,8 @@ body {
 }
 
 img {
-  width: 100%
+  width: 100%;
+  display:block;
 }
 
 header {
@@ -23,13 +24,19 @@ header {
   grid-template-rows: auto 1.5rem;
   margin-bottom: 1.5rem;
   grid-template-areas:
-  "left center right"
-  ". center .";
+    "left center right"
+    ". center .";
+}
+
+header > h1 {
+  grid-area: center;
+  margin: 0;
+  z-index: 0;
 }
 
 nav {
   background: #bd027d;
-  grid-column: 1, -1;
+  grid-column: 1 / -1;
   grid-row: 1;
 }
 
